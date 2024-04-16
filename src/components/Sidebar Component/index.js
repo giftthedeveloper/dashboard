@@ -1,6 +1,10 @@
-import React from 'react'
-import { BottomComponent,HeaderText,MenuItem, IconWrapper, LeftComponent, LogoComponent, MainComponent, RightComponent } from './elements'
-import { PersonOutlineOutlined, ShoppingCart, ShoppingCartOutlined, Speed, StackedLineChart, TaskOutlined, TrackChanges } from '@mui/icons-material';
+import React, { Profiler } from 'react'
+import { BottomComponent,HeaderText,MenuItem, IconWrapper, LeftComponent, LogoComponent, MainComponent, 
+     RightComponent, ProfileContainer, ProfileImage, ProfileName, DropdownIcon, ProfileRole, 
+     ProfileInfo,ColoredMenuItem, ProfileList, Profile,
+     ProfileRoleContainer} from './elements'
+import { MessageOutlined, NotificationsNoneOutlined, PersonOutlineOutlined, SettingsOutlined, ShoppingCart, 
+     ShoppingCartOutlined, Speed, StackedLineChart, TaskOutlined, TrackChanges, } from '@mui/icons-material';
 
 
 function SidebarComponent() {
@@ -9,10 +13,10 @@ function SidebarComponent() {
         <LogoComponent />
         <HeaderText>MENU</HeaderText>
         <LeftComponent>
-          <MenuItem>
+          <ColoredMenuItem>
               <IconWrapper><Speed /></IconWrapper>
               Dashboard
-          </MenuItem>
+          </ColoredMenuItem>
 
           <MenuItem>
               <IconWrapper><ShoppingCartOutlined /></IconWrapper>
@@ -42,24 +46,40 @@ function SidebarComponent() {
         </LeftComponent>
         <HeaderText>PROFILE</HeaderText>
         <RightComponent>
+            
 
         <MenuItem>
-              <IconWrapper><TaskOutlined /></IconWrapper>
-              Task
+              <IconWrapper><MessageOutlined /></IconWrapper>
+              Message
           </MenuItem>
 
           <MenuItem>
-              <IconWrapper><TaskOutlined /></IconWrapper>
-              Task
+              <IconWrapper><NotificationsNoneOutlined /></IconWrapper>
+              Notification
           </MenuItem>
           <MenuItem>
-              <IconWrapper><TaskOutlined /></IconWrapper>
-              Task
+              <IconWrapper><SettingsOutlined /></IconWrapper>
+              Settings
           </MenuItem>
 
         </RightComponent>
         <BottomComponent>
-
+            <ProfileInfo>
+            <ProfileContainer>
+                <Profile>
+                <ProfileImage />
+                
+                <ProfileList>
+                <ProfileName>Devon Lane</ProfileName>
+                <ProfileRole>Manager</ProfileRole>
+                </ProfileList>
+                <DropdownIcon />
+                </Profile>
+            </ProfileContainer>
+            </ProfileInfo>
+            {/* <ProfileRoleContainer>
+                <ProfileRole>Manager</ProfileRole>
+            </ProfileRoleContainer> */}
         </BottomComponent>
     </MainComponent>
         
