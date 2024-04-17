@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import CloudImg from './cloud_img.png';
+import { Add, DateRange, NotificationAddOutlined, SearchOutlined } from '@mui/icons-material';
 
 export const Nav = styled.nav`
   background-color: white;
@@ -45,17 +46,18 @@ export const Profile = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 25px;
-  padding-left: 2px;
-  margin-left: 2px;
+  margin-left: 0px;
   color: #37393d;
   margin-top: 2px;
-  font-size: 13px;
+  /* font-size: 20px; */
+  width: 100%;
+  background-color: white;
 `;
 
 export const LeftComponent = styled.div`
     display: flex;
     height: 100%;
-    width: 15%;
+    width: 100%;
     background-color: white;
     text-align: left;
     align-items: center;
@@ -66,24 +68,10 @@ export const LeftComponent = styled.div`
 `;
 
 
-export const RightComponent = styled.div`
-    display: flex;
-    height: 100%;
-    width: 70%;
-    background-color: white;
-    text-align: right;
-    align-items: center;
-    margin-left: 15%;
-    justify-content: space-between;
-    flex-direction: column; 
-    justify-content: flex-end;
-`;
-
-
 export const HeaderText = styled.h3`
   font-size: 30px;
   text-align: center;
-  margin-left: 5px;
+  margin-left: 10px;
   margin-bottom: 0px;
   margin-top: 0px;
 `;
@@ -94,6 +82,7 @@ export const WeatherImg = styled.div`
     border-radius: 50%;
     background-image: url(${CloudImg});
     background-size: cover;
+    margin-left: 20px;
 `;
 
 export const ProfileList = styled.div`
@@ -101,7 +90,23 @@ export const ProfileList = styled.div`
   align-items: flex-start;
   text-align: left;
   flex-direction: column;
+  justify-content: space-between;
   margin-left: 10px;
+  width: 100%;
+  
+`;
+
+
+export const WeatherList = styled.div`
+  display: flex;
+  align-items: flex-start;
+  /* text-align: left; */
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 10%;
+  height: 100%;
+  background-color: white;
   
 `;
 
@@ -117,6 +122,105 @@ export const ProfileRole = styled.div`
   color: #888;
   text-align: left;
   margin-right: 0px;
+`;
 
+export const RightComponent = styled.div`
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: right;
+    align-items: center;
+    margin-right: 5%;
+    justify-content: space-between;
+    flex-direction: row; 
+    justify-content: flex-end;
+`;
+
+export const ProjectButton = styled.button`
+    padding: 5px 5px;
+    background-color: white;
+    color: #fff;
+    /* border: 1px solid #888; */
+    /* border-radius: 2px; */
+    cursor: pointer;
+    margin-right: 5%;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1); 
+`;
+
+export const SearchInput = styled.input`
+    background-color: white;
+    height: 100%;
+    border: none;
+    /* color: #333;  */
+    outline: none;
+    ::placeholder {
+        color: #37393d;
+    }
+`;
+
+export const SearchBarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-right: 5%;
+  padding: 5px 5px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1); 
+  height: 100%;
+
+
+`;
+export const SearchIcon = styled(SearchOutlined)`
+    max-width: 14px;
+    margin: 0px;
+    background-color: white;
+    margin-left: 10px;
+    height: 100%;
+    margin-right: 10px;
+    color: #37393d;
+`;
+export const CalendarIcon = styled(DateRange)`
+    color:  #ffa834 ;
+    font-size: 8px;
+    max-width: 15px;
+    margin-right: 5px;
+`;
+
+export const AddIcon = styled(Add)`
+    color:  green ;
+    font-size: 8px;
+    max-width: 15px;
+    margin-right: 5px;
+`;
+
+export const DateDetails = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  color: #37393d;
+  font-size: 13px;
+
+`;
+
+export const NotificationCircle = styled.div`
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+    justify-content: center; /* Center the content horizontally and vertically */
+    border-radius: 50%;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1); 
+
+
+`;
+
+export const NotificationIcon = styled(NotificationAddOutlined)`
+    max-width: 16px;
+    margin: 0px;
+    color: #37393d;
 
 `;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderText, LeftComponent, DayName, WeatherLocation, Nav, NavContainer, Profile, ProfileList, ProfileName, ProfileRole, WeatherImg } from './elements'
+import { HeaderText, LeftComponent,SearchBarContainer, SearchIcon, SearchInput, DayName, WeatherLocation, Nav, NavContainer, Profile, ProfileList, ProfileName, ProfileRole, WeatherImg, RightComponent, ProjectButton, CalendarIcon, DateDetails, AddIcon, SearchBar, NotificationCircle, NotificationIcon, WeatherList } from './elements'
 
 function NavbarComponent() {
   return (
@@ -10,10 +10,33 @@ function NavbarComponent() {
                     <Profile>
                         <WeatherImg />
                         <HeaderText>75</HeaderText>
-                        <ProfileList>
+                        <WeatherList>
                             <DayName>Wednesday</DayName>
                             <WeatherLocation>Sydney, Australia</WeatherLocation>
-                        </ProfileList>
+                        </WeatherList>
+
+                        <RightComponent>
+                        <SearchBarContainer>
+                            <SearchIcon />
+                            <SearchInput type="text" placeholder="Search here..." />
+                        </SearchBarContainer>
+                        <ProjectButton>
+                                <DateDetails>
+                                    <AddIcon /> Add Project
+                                </DateDetails>
+                            </ProjectButton>
+                            <ProjectButton>
+                                <DateDetails>
+                                    <CalendarIcon /> 30/11/2021
+                                </DateDetails>
+                        </ProjectButton>
+                        <NotificationCircle>
+                            <NotificationIcon />
+                        </NotificationCircle>
+
+                        </RightComponent>
+
+
                     </Profile>
                 </ProfileList>
                 <ProfileList>
@@ -21,6 +44,30 @@ function NavbarComponent() {
                     <ProfileRole>Manager</ProfileRole>
                 </ProfileList>
             </LeftComponent>
+
+            {/* <RightComponent>
+                <Profile>
+                <SearchBarContainer>
+                    <SearchIcon />
+                    <SearchInput type="text" placeholder="Search here..." />
+                </SearchBarContainer>
+                <ProjectButton>
+                        <DateDetails>
+                            <AddIcon /> Add Project
+                        </DateDetails>
+                    </ProjectButton>
+                    <ProjectButton>
+                        <DateDetails>
+                            <CalendarIcon /> 30/11/2021
+                        </DateDetails>
+                </ProjectButton>
+                <NotificationCircle>
+                    <NotificationIcon />
+                </NotificationCircle>
+
+                </Profile>
+                
+            </RightComponent> */}
 
         </NavContainer>
     </Nav>
