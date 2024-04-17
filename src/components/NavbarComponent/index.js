@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderText, LeftComponent,SearchBarContainer, SearchIcon, SearchInput, DayName, WeatherLocation, Nav, NavContainer, Profile, ProfileList, ProfileName, ProfileRole, WeatherImg, RightComponent, ProjectButton, CalendarIcon, DateDetails, AddIcon, SearchBar, NotificationCircle, NotificationIcon, WeatherList } from './elements'
+import { HeaderText, LeftComponent,SearchBarContainer,IconsRightComponent, SearchIcon, SearchInput, DayName, WeatherLocation, Nav, NavContainer, Profile, ProfileList, ProfileName, ProfileRole, WeatherImg, RightComponent, ProjectButton, CalendarIcon, DateDetails, AddIcon, SearchBar, NotificationCircle, NotificationIcon, WeatherList, BottomProfile, WelcomeContainer, IconsProfile, BottomProfileList, SalesList, MoneyIcon, IconItemsComponent, MoneyGrowthIcon, MoneyAnalysisIcon, RightArrowIcon } from './elements'
 
 function NavbarComponent() {
   return (
@@ -39,10 +39,44 @@ function NavbarComponent() {
 
                     </Profile>
                 </ProfileList>
-                <ProfileList>
-                    <ProfileName>Welcome, Devon Lane!</ProfileName>
-                    <ProfileRole>Manager</ProfileRole>
-                </ProfileList>
+                {/* <BottomProfile> */}
+                    <BottomProfileList>
+                        <WelcomeContainer>
+                            <ProfileName>Welcome, Devon Lane!</ProfileName>
+                            <ProfileRole>Manager</ProfileRole>
+                        </WelcomeContainer>
+                        <IconsRightComponent>
+                            <IconItemsComponent>
+                                <MoneyIcon />
+                                <SalesList>
+                                    <DayName>N8,542.40</DayName>
+                                    <WeatherLocation>Net Benefit</WeatherLocation>
+                                </SalesList>
+                            </IconItemsComponent>
+
+                            <IconItemsComponent>
+                                <MoneyGrowthIcon />
+                                <SalesList>
+                                    <DayName>N782.45</DayName>
+                                    <WeatherLocation>Referenced Earnings</WeatherLocation>
+                                </SalesList>
+                            </IconItemsComponent>
+
+                            <IconItemsComponent>
+                                <MoneyAnalysisIcon />
+                                <SalesList>
+                                    <DayName>N5,896.00</DayName>
+                                    <WeatherLocation>Accessed Sales</WeatherLocation>
+                                </SalesList>
+                            </IconItemsComponent>
+                                <RightArrowIcon />
+
+
+                          
+                        </IconsRightComponent>
+                    </BottomProfileList>
+                    
+                {/* </BottomProfile> */}
             </LeftComponent>
 
             {/* <RightComponent>

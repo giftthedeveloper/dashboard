@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import CloudImg from './cloud_img.png';
-import { Add, DateRange, NotificationAddOutlined, SearchOutlined } from '@mui/icons-material';
+import { Add, ArrowDropDown, ArrowRight, DateRange, KeyboardArrowRightOutlined, NotificationAddOutlined, SearchOutlined } from '@mui/icons-material';
+import MoneyImg from './money-bag-xxl.png';
+import MoneyGrowth from './money-growth.png';
+import analysisImg from './analysis.png';
+
 
 export const Nav = styled.nav`
   background-color: white;
@@ -54,6 +58,24 @@ export const Profile = styled.div`
   background-color: white;
 `;
 
+export const IconsProfile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  /* font-size: 20px; */
+  width: 70%;
+  background-color: white;
+`;
+
+export const BottomProfile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-top: 2px;
+  width: 100%;
+  background-color: white;
+`;
+
 export const LeftComponent = styled.div`
     display: flex;
     height: 100%;
@@ -93,7 +115,27 @@ export const ProfileList = styled.div`
   justify-content: space-between;
   margin-left: 10px;
   width: 100%;
+  background-color: white;
   
+`;
+
+
+export const BottomProfileList = styled.div`
+  display: flex;
+  align-items: center;
+  text-align: left;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  
+`;
+
+export const WelcomeContainer = styled.div`
+  width: 15%;
+  background-color: white;
 `;
 
 
@@ -110,6 +152,18 @@ export const WeatherList = styled.div`
   
 `;
 
+export const SalesList = styled.div`
+  display: flex;
+  align-items: flex-start;
+  /* text-align: left; */
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  /* width: 10%; */
+  height: 100%;
+  background-color: white;
+  
+`;
 
 export const ProfileName = styled.div`
   font-size: 14px;
@@ -130,12 +184,63 @@ export const RightComponent = styled.div`
     width: 100%;
     background-color: white;
     text-align: right;
-    align-items: center;
+    align-items: flex-end;
     margin-right: 5%;
     justify-content: space-between;
     flex-direction: row; 
     justify-content: flex-end;
 `;
+
+
+
+
+export const IconsRightComponent = styled.div`
+  width: 85%; 
+  background-color: white;
+  display: flex;
+  height: 100%;
+  text-align: left;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row; 
+  height: 100%;
+  margin-right: 5%;
+`;
+
+export const IconItemsComponent = styled.div`
+    display:flex;
+    background-color: white;
+    height: 100%;
+    width: 15%;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-right: 5px;
+
+`;
+  export const MoneyIcon = styled.div`
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-image: url(${MoneyImg});
+    background-size: cover;
+  `;  
+
+  export const MoneyGrowthIcon = styled.div`
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(${MoneyGrowth});
+  background-size: cover;
+  `; 
+  export const MoneyAnalysisIcon = styled.div`
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url(${analysisImg});
+  background-size: cover;
+`;   
+
 
 export const ProjectButton = styled.button`
     padding: 5px 5px;
@@ -220,6 +325,13 @@ export const NotificationCircle = styled.div`
 
 export const NotificationIcon = styled(NotificationAddOutlined)`
     max-width: 16px;
+    margin: 0px;
+    color: #37393d;
+
+`;
+
+export const RightArrowIcon = styled(KeyboardArrowRightOutlined)`
+    max-width: 26px;
     margin: 0px;
     color: #37393d;
 
