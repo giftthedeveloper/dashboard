@@ -11,6 +11,7 @@ export const MainComponent = styled.div`
   flex-direction: column; 
   justify-content: flex-start;
   padding-left: 10px;
+  z-index: 999;
   
 `;
 
@@ -127,6 +128,9 @@ export const ProfileName = styled.div`
   /* margin-left: 10px;  */
   font-size: 14px;
 `;
+
+
+
 export const ProfileRole = styled.div`
   margin-top: 5px;
    
@@ -135,8 +139,8 @@ export const ProfileRole = styled.div`
   text-align: left;
   margin-right: 0px;
 
-
 `;
+
 export const ProfileList = styled.div`
   display: flex;
   align-items: flex-start;
