@@ -233,6 +233,7 @@ export const IconItemsComponent = styled.div`
   background-image: url(${MoneyGrowth});
   background-size: cover;
   `; 
+  
   export const MoneyAnalysisIcon = styled.div`
   width: 20px;
   height: 20px;
