@@ -22,7 +22,7 @@ export const SubmainComponent = styled.div`
 export const LeftComponent = styled.div`
     width: 70%;
     height: 100%;
-    background-color: pink;
+    /* background-color: pink; */
     display: flex;
     align-items: center;
     justify-content: center; /* Center the content horizontally */
@@ -45,7 +45,7 @@ export const LeftTopComponent = styled.div`
 export const LeftBottomComponent = styled.div`
     width: 100%;
     height: 40%;
-    background-color: blue;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -53,7 +53,65 @@ export const LeftBottomComponent = styled.div`
     flex-direction: column;
     border-radius: 10px;
     margin-top: 20px;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center; 
+`;
+
+export const TableContainer = styled.div`
+    margin-top: 10px;
+    display: flex;
+    /* background-color: orange; */
+    width: 100%;
+
+`;
+
+
+export const TableRow = styled.tr`
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add drop shadow to each row */
+    width: 100%; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    /* background-color: pink; */
+    margin-bottom: 10px; /* Add margin between rows */
+`;
+
+
+export const TableCell = styled.td`
+    margin-right: 70px;
+    display: flex;
+`;
+export const CompleteTableButton = styled.button`
+    padding: 5px 10px;
+    background-color: #44ac04;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+`;
+
+export const PendingTableButton = styled.button`
+    padding: 5px 10px;
+    background-color: #f48414;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+`;
+
+export const ProcessingTableButton = styled.button`
+    padding: 5px 10px;
+    background-color:  #1ebfcd ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+`;
+export const StyledTable = styled.table`
+    width: 100%; 
+    display: flex;
+    /* background-color: pink; */
 `;
 
 export const RightComponent = styled.div`
