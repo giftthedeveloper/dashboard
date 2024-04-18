@@ -32,6 +32,30 @@ export const LeftComponent = styled.div`
 `;
 
 
+export const LeftTopComponent = styled.div`
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 10px;
+`;
+
+export const LeftBottomComponent = styled.div`
+    width: 100%;
+    height: 40%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Center the content horizontally */
+`;
+
 export const RightComponent = styled.div`
     width: 30%;
     height: 100%;
@@ -78,6 +102,14 @@ export const RightBottomComponent = styled.div`
 export const HeaderText = styled.h3`
     font-size: 14px;
     color: #888;
+
+`;
+
+export const GraphHeaderText = styled.h3`
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+    margin-left: 20px;
 
 `;
 

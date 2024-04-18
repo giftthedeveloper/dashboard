@@ -1,11 +1,16 @@
 import React from 'react'
-import { ActivityList, BottomComponent,Date, Name, HeaderText, ImgIcon, LeftComponent, MainComponent, MainText, ProgramItemsComponent, ProgramItemsList, RightBottomComponent, RightComponent, RightTopComponent, SubText, Subject, SubmainComponent, TopComponent, UpcomingProgramHeaderText, BlueImgIcon, RedImgIcon } from './elements'
+import { ActivityList, BottomComponent,Date, Name, HeaderText, ImgIcon, LeftComponent, MainComponent, MainText, ProgramItemsComponent, ProgramItemsList, RightBottomComponent, RightComponent, RightTopComponent, SubText, Subject, SubmainComponent, TopComponent, UpcomingProgramHeaderText, BlueImgIcon, RedImgIcon, LeftTopComponent, LeftBottomComponent, GraphHeaderText } from './elements'
 
 function MainMiddleComponent() {
   return (
     <MainComponent>
         <SubmainComponent>
-            <LeftComponent></LeftComponent>
+            <LeftComponent>
+                <LeftTopComponent>
+                    <GraphHeaderText>Sales Activities</GraphHeaderText>
+                </LeftTopComponent>
+                <LeftBottomComponent></LeftBottomComponent>
+            </LeftComponent>
             <RightComponent>
                 <RightTopComponent>
                     <HeaderText>User Activity</HeaderText>
