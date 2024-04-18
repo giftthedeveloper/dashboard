@@ -70,7 +70,7 @@ export const TableRow = styled.tr`
     width: 100%; 
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px;
     font-size: 14px;
     /* background-color: pink; */

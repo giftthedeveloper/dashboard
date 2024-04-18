@@ -42,13 +42,13 @@ function MainMiddleComponent() {
                                         <td><TableCell><PendingTableButton>Pending</PendingTableButton></TableCell></td>
                                     </TableRow>
 
-                                    <TableRow>
+                                    {/* <TableRow>
                                         <td><TableCell>#2458</TableCell></td>
                                         <td><TableCell>Ariene McCoy</TableCell></td>
                                         <td><TableCell>Coppelle Virginia</TableCell></td>
                                         <td><TableCell>18/11/21</TableCell></td>
                                         <td><TableCell><ProcessingTableButton>Processing</ProcessingTableButton></TableCell></td>
-                                    </TableRow>
+                                    </TableRow> */}
 
                                     {/* Add more rows as needed */}
                                 </tbody>
