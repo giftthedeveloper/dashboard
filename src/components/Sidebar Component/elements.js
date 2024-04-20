@@ -112,8 +112,10 @@ export const Profile = styled.div`
   margin-left: 2px;
   color: #37393d;
   margin-top: 2px;
-  font-size: 13px;
+  font-size: 10px;
+
 `;
+
 
 export const ProfileImage = styled.img`
   width: 35px;
@@ -127,6 +129,8 @@ export const ProfileImage = styled.img`
 export const ProfileName = styled.div`
   /* margin-left: 10px;  */
   font-size: 14px;
+  width: 150%;
+
 `;
 
 
@@ -146,7 +150,8 @@ export const ProfileList = styled.div`
   align-items: flex-start;
   text-align: left;
   flex-direction: column;
-  margin-left: 10px
+  margin-left: 5px;
+
 `;
 
 export const ProfileRoleContainer = styled.div`

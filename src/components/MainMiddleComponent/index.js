@@ -1,5 +1,10 @@
 import React from 'react'
 import { ActivityList,TableContainer,TableCell, StyledTable, CompleteTableButton, PendingTableButton, ProcessingTableButton, TableRow, BottomComponent,Date, Name, HeaderText, ImgIcon, LeftComponent, MainComponent, MainText, ProgramItemsComponent, ProgramItemsList, RightBottomComponent, RightComponent, RightTopComponent, SubText, Subject, SubmainComponent, TopComponent, UpcomingProgramHeaderText, BlueImgIcon, RedImgIcon, LeftTopComponent, LeftBottomComponent, GraphHeaderText } from './elements'
+// import SalesGraphComponent from '../SalesGraphComponent'
+import { Line } from 'react-chartjs-2'
+import revenurData from './data/RevenueData.json'
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 function MainMiddleComponent() {
   return (
@@ -8,6 +13,24 @@ function MainMiddleComponent() {
         <LeftComponent>
                     <LeftTopComponent>
                         <GraphHeaderText>Sales Activities</GraphHeaderText>
+                        <Line data={{
+                            labels: revenurData.map((data) => data.label),
+                            datasets: [
+                                {
+                                    label: "Revenue",
+                                    data: revenurData.map((data) => data.revenue),
+                                    backgroundColor: "#064ff0",
+                                    borderColor: "#064ff0"
+                                },
+                                {
+                                    label: "cost",
+                                    data: revenurData.map((data) => data.cost),
+                                    backgroundColor: "#ff3030",
+                                    borderColor: "#ff3030"
+                                }
+                            ]
+                        }}/>
+                        
                     </LeftTopComponent>
                     <LeftBottomComponent>
                         <GraphHeaderText>Orders</GraphHeaderText>
@@ -42,15 +65,7 @@ function MainMiddleComponent() {
                                         <td><TableCell><PendingTableButton>Pending</PendingTableButton></TableCell></td>
                                     </TableRow>
 
-                                    {/* <TableRow>
-                                        <td><TableCell>#2458</TableCell></td>
-                                        <td><TableCell>Ariene McCoy</TableCell></td>
-                                        <td><TableCell>Coppelle Virginia</TableCell></td>
-                                        <td><TableCell>18/11/21</TableCell></td>
-                                        <td><TableCell><ProcessingTableButton>Processing</ProcessingTableButton></TableCell></td>
-                                    </TableRow> */}
-
-                                    {/* Add more rows as needed */}
+                                   
                                 </tbody>
                             </table>
                             </StyledTable>
