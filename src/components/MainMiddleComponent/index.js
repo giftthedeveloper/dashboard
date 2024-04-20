@@ -1,10 +1,13 @@
 import React from 'react'
-import { ActivityList,TableContainer,TableCell, StyledTable, CompleteTableButton, PendingTableButton, ProcessingTableButton, TableRow, BottomComponent,Date, Name, HeaderText, ImgIcon, LeftComponent, MainComponent, MainText, ProgramItemsComponent, ProgramItemsList, RightBottomComponent, RightComponent, RightTopComponent, SubText, Subject, SubmainComponent, TopComponent, UpcomingProgramHeaderText, BlueImgIcon, RedImgIcon, LeftTopComponent, LeftBottomComponent, GraphHeaderText } from './elements'
+import { ActivityList,TableContainer,TableCell,DurationButton,  StyledTable, GraphTextArea, GraphSection, CompleteTableButton, PendingTableButton, ProcessingTableButton, TableRow, BottomComponent,Date, Name, HeaderText, ImgIcon, LeftComponent, MainComponent, MainText, ProgramItemsComponent, ProgramItemsList, RightBottomComponent, RightComponent, RightTopComponent, SubText, Subject, SubmainComponent, TopComponent, UpcomingProgramHeaderText, BlueImgIcon, RedImgIcon, LeftTopComponent, LeftBottomComponent, GraphHeaderText, DropdownIcon } from './elements'
 // import SalesGraphComponent from '../SalesGraphComponent'
 import { Line } from 'react-chartjs-2'
 import revenurData from './data/RevenueData.json'
+import { CanvasRenderingContext2D } from 'canvas';
 import { Chart, registerables } from 'chart.js';
+import { X } from '@mui/icons-material';
 Chart.register(...registerables);
+
 
 function MainMiddleComponent() {
   return (
@@ -12,24 +15,59 @@ function MainMiddleComponent() {
         <SubmainComponent>
         <LeftComponent>
                     <LeftTopComponent>
-                        <GraphHeaderText>Sales Activities</GraphHeaderText>
-                        <Line data={{
-                            labels: revenurData.map((data) => data.label),
-                            datasets: [
+                        <GraphTextArea>
+                            <GraphHeaderText>Sales Activities</GraphHeaderText>
+                            <DurationButton>Yearly
+                            <DropdownIcon />
+                            </DurationButton>
+                        </GraphTextArea>
+                        <GraphSection>
+                        <Line
+                            data={{
+                                labels: revenurData.map((data) => data.label),
+                                datasets: [
                                 {
                                     label: "Revenue",
                                     data: revenurData.map((data) => data.revenue),
-                                    backgroundColor: "#064ff0",
-                                    borderColor: "#064ff0"
-                                },
-                                {
-                                    label: "cost",
-                                    data: revenurData.map((data) => data.cost),
-                                    backgroundColor: "#ff3030",
-                                    borderColor: "#ff3030"
+                                   
+                                    borderColor: "#064ff0",
+                                    fill: true,
+                                    backgroundColor: "#e9f5fd",
+
                                 }
-                            ]
-                        }}/>
+                                ],
+                            }}
+                            options={{
+                                backgroundColor: 'rgba(128, 189, 255, 0.2)',
+                                scales: {
+                                x: {
+                                    beginAtZero: true,
+                                    grid: {
+                                    display: false, 
+                                    },
+                                },
+                                y: {
+                                    // beginAtZero: true,
+                                    grid: {
+                                    display: false, 
+                                    },
+                                },
+                                },
+                                legend: { display: false }, 
+                                elements: {
+                                    point: {
+                                      radius: 0, 
+                                    },
+                                },
+                                lineTension: 0.4,
+                                layout: {
+                                    padding: 0,
+                                  },
+                                responsive: true,
+                            }}
+                            />
+
+                            </GraphSection>
                         
                     </LeftTopComponent>
                     <LeftBottomComponent>

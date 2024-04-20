@@ -1,3 +1,4 @@
+import { ArrowDropDown } from "@mui/icons-material";
 import styled from "styled-components";
 
 
@@ -37,11 +38,42 @@ export const LeftTopComponent = styled.div`
     height: 60%;
     background-color: white;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     border-radius: 10px;
+    flex-direction: column;
 `;
 
+export const GraphSection = styled.div`
+    width: 90%;
+    height: 80%;
+
+    display: flex;
+    margin-left: 10px;
+    position: relative;
+    
+`;
+
+export const GraphTextArea = styled.div`
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+export const DurationButton = styled.button`
+    background-color: #e8f3f9;
+    align-items: center;
+    display: flex;
+    margin-right: 30px;
+    outline: none;
+    border: none;
+`;
+
+export const DropdownIcon = styled(ArrowDropDown)`
+    max-width: 16px;
+
+`;
 export const LeftBottomComponent = styled.div`
     width: 100%;
     height: 40%;
@@ -57,10 +89,14 @@ export const LeftBottomComponent = styled.div`
 `;
 
 export const TableContainer = styled.div`
-    margin-top: 10px;
+    /* margin-top: 10px; */
     display: flex;
     /* background-color: orange; */
     width: 100%;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
 
 `;
 
@@ -68,12 +104,16 @@ export const TableContainer = styled.div`
 export const TableRow = styled.tr`
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add drop shadow to each row */
     width: 100%; 
+    max-width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     padding: 10px;
     font-size: 14px;
+    flex-direction: row;
     /* background-color: pink; */
+    margin-right: 60px;
+
     margin-bottom: 10px; /* Add margin between rows */
 `;
 
