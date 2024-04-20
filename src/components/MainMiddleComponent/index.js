@@ -37,6 +37,7 @@ function MainMiddleComponent() {
                                 }
                                 ],
                             }}
+                            width={10}
                             options={
                         
                                 {
@@ -47,6 +48,7 @@ function MainMiddleComponent() {
                                       
                                         
                                     },
+                                maintainAspectRatio: false,
                                 backgroundColor: 'rgba(128, 189, 255, 0.2)',
                                 scales: {
                                 x: {
