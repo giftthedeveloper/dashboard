@@ -27,7 +27,7 @@ function MainMiddleComponent() {
                                 labels: revenurData.map((data) => data.label),
                                 datasets: [
                                 {
-                                    label: "Revenue",
+                                    // label: "Revenue",
                                     data: revenurData.map((data) => data.revenue),
                                    
                                     borderColor: "#064ff0",
@@ -37,7 +37,16 @@ function MainMiddleComponent() {
                                 }
                                 ],
                             }}
-                            options={{
+                            options={
+                        
+                                {
+                                    plugins: {
+                                        legend: {
+                                            display: false
+                                        },
+                                      
+                                        
+                                    },
                                 backgroundColor: 'rgba(128, 189, 255, 0.2)',
                                 scales: {
                                 x: {
@@ -47,13 +56,17 @@ function MainMiddleComponent() {
                                     },
                                 },
                                 y: {
-                                    // beginAtZero: true,
+                                    beginAtZero: true,
+                                    ticks: {
+                                        stepSize: 10000,
+                                    },
                                     grid: {
                                     display: false, 
                                     },
                                 },
                                 },
-                                legend: { display: false }, 
+                              
+                               
                                 elements: {
                                     point: {
                                       radius: 0, 
@@ -82,7 +95,6 @@ function MainMiddleComponent() {
                                     <th><TableCell>Location</TableCell></th>
                                     <th><TableCell>Start Date</TableCell></th>
                                     <th><TableCell>Status</TableCell></th>
-                                    <th><TableCell>Action</TableCell></th> 
                                 </TableRow>
                             </thead>
 

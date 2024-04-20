@@ -113,6 +113,7 @@ export const TableRow = styled.tr`
     flex-direction: row;
     /* background-color: pink; */
     margin-right: 60px;
+    flex-wrap: wrap;
 
     margin-bottom: 10px; /* Add margin between rows */
 `;
@@ -121,7 +122,11 @@ export const TableRow = styled.tr`
 export const TableCell = styled.td`
     margin-right: 70px;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
 `;
+
 export const CompleteTableButton = styled.button`
     padding: 5px 10px;
     background-color: #44ac04;
